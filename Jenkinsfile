@@ -3,7 +3,7 @@ pipeline {
      stages {
           stage("Compile") {
                steps {
-                    sh "/usr/bin/mvn compile"
+                    sh "/usr/bin/mvn clean compile"
                }
           }
           stage("Unit test") {
