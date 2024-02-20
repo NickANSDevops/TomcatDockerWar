@@ -31,7 +31,7 @@ stage("Deploy to staging") {
           sh "docker run --name check -d ubuntu"
           sh "docker stop \$(docker ps -qa)"
           sh "docker rm \$(docker ps -qa)"
-          sh "docker run -d -it -v /var/lib/jenkins/workspace/Nicky-Declarative-pipeline-docker-jenkins/target/:/usr/local/tomcat/webapps/ -p 8091:8080 --name Testtomcat nicky_tomcat"
+          sh "docker run -d -it -v /var/lib/jenkins/workspace/Docker-pipeline/target/:/usr/local/tomcat/webapps/ -p 8091:8080 --name Testtomcat nicky_tomcat"
      }
 }
 
